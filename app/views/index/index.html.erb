@@ -1,0 +1,35 @@
+<!-- Project One -->
+    <% @products.each do |product| %>
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                 
+                    <%=image_tag product.image ,class:'img-responsive product-img' %>
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3><%= product.name %></h3>
+                <h4>$ <%= product.price %></h4>
+                <p><%= product.detail%></p>
+                <%if current_user || current_admin %>
+                <%= link_to product_path(product), class: 'btn btn-success' do  %>
+                   <i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy
+                 <%end%>
+                 <%else%>
+                     <%= link_to  new_user_session_path, class: 'btn btn-success' do  %>
+                   <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Buy
+                 <%end%>
+                  <%end%>
+
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+        <%end%>
+<style type="text/css">
+    .product-img{
+        width: 700px;
+        height: 300px;
+    }
+</style>

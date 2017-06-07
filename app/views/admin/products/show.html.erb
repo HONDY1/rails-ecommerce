@@ -1,0 +1,30 @@
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Products  <small>show</small></h1>
+
+      </div>
+      <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+       <div class="panel panel-default">
+           <div class="panel-body">
+            <%=image_tag @product.image ,class:"img-responsive product"%>
+      <hr>
+          <h3>Name : <%=@product.name%></h3>   
+          <p>Detail : <%=@product.detail%></p>    
+          <p>Price : <%=@product.price%></p>    
+        </div>
+            </div>
+        <br>
+        <h1>
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+
+    <style>
+img.img-responsive.product {
+    margin: 0 auto;
+        height: 300px;
+}
+    </style>

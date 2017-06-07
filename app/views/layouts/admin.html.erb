@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ecommerce Admin</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'admin/main', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+<div id="wrapper">
+<%= render 'layouts/nav_top_admin' %>
+<%= render 'layouts/nav_side_admin' %>
+<div id="page-wrapper">
+       
+      <%= yield %>
+     
+</div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".dropdown-toggle").dropdown();
+});
+</script>
+  </body>
+</html>

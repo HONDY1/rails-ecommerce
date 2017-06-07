@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sing In topevent</title>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= yield :stylesheets %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= yield :javascripts %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+   <%= yield %>
+   </div>
+   </div>
+   </div>
+  </body>
+  </html>

@@ -1,0 +1,31 @@
+      <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Products  <small><%=link_to "NEW" ,new_admin_product_path%></small></h1>
+
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+ 
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        
+        <td><%= link_to 'Show',  admin_product_path(product) %></td>
+        <td><%= link_to 'Edit', edit_admin_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

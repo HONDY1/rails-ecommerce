@@ -1,0 +1,8 @@
+<%= bootstrap_form_for([:admin, @product], :html => {:class => 'form-group'}) do |f| %>
+<%=f.file_field :image %>
+  <%=f.text_field :name %>
+
+  <%=f.text_field :price %>
+  <%=f.text_area :detail %>
+   <%= f.submit "Submit" %>
+<%end%>
